@@ -9,3 +9,29 @@ html {
 body {
   margin: 0;
 }
+
+.header{
+  padding:2px;
+}
+
+.footer{
+  margin:12px;
+  padding:0px !important;
+}
+
+#instagram{
+  color: #000;
+  background-color: aqua;
+}
+
+#facebook{
+  color: #fff;
+  background-color: aqua;
+  page-break-after: always;
+  word-spacing: 0mm;
+  margin-top: 0em;
+  margin-bottom: 12px;
+  justify-content: first baseline;
+}
+
+

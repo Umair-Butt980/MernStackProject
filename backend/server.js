@@ -27,6 +27,11 @@ app.get('/products', (req, res, next) => {
   res.status(200).json({ products: DUMMY_PRODUCTS });
 });
 
+//Get All Products Api
+app.get('/allProducts', (req, res, next) => {
+  res.status(200).json({ products: DUMMY_PRODUCTS });
+});
+
 //post products api
 app.post('/product', (req, res, next) => {
   const { title, price } = req.body;
