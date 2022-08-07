@@ -27,6 +27,35 @@ app.get('/products', (req, res, next) => {
   res.status(200).json({ products: DUMMY_PRODUCTS });
 });
 
+// updating the products
+app.put('/products/update' , async (req,res,next) =>{
+  let fetchedProduct = await prodcuts.findById(req.body.id);
+  if(fetchedProduct){
+    fetchedProduct.update(req.body);
+    res.status(200).send({
+      status:"true",
+      message:"product is updated successfully",
+      data:{
+        fetchedProduct
+      }
+    })
+  }
+})
+
+app.delete('/products/delete' , async (req,res,next) =>{
+  let fetchedProduct = await prodcuts.findById(req.body.id);
+  if(fetchedProduct){
+    fetchedProduct.remove(req.body);
+    res.status(200).send({
+      status:"true",
+      message:"product deleted successfully",
+      data:{
+        fetchedProduct
+      }
+    })
+  }
+})
+
 //Get All Products Api
 app.get('/allProducts', (req, res, next) => {
   res.status(200).json({ products: DUMMY_PRODUCTS });
