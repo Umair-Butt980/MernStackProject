@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import NewProduct from './components/Products/NewProduct';
 import ProductList from './components/Products/ProductList';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [loadedProducts, setLoadedProducts] = useState([]);
@@ -67,6 +68,7 @@ function App() {
         {isLoading && <p className="loader">Loading...</p>}
         {!isLoading && <ProductList items={loadedProducts} />}
       </main>
+      <Footer/>
     </React.Fragment>
   );
 }
