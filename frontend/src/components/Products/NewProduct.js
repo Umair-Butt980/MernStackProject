@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import submitButton from '../submitButtons/subButton';
 import './NewProduct.css';
 
 const NewProduct = props => {
@@ -41,6 +42,7 @@ const NewProduct = props => {
           onChange={priceChangeHandler}
         />
         <Button type="submit">ADD PRODUCT</Button>
+        <submitButton> Hey submit me </submitButton>
       </form>
     </section>
   );
