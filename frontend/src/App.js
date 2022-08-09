@@ -1,6 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
+import userComponent from "./users/components/Users"
 
-function app(){
-  return <h1>This is the new frontend application</h1> 
+const app = () => {
+  return (
+    <BrowserRouter>
+      <Route path="/users" exact>
+          <userComponent/>  
+      </Route>
+  </BrowserRouter>
+  )
+
 }
 export default app
