@@ -9,14 +9,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <MainNavigation>
-        <Switch>
-            <Route path="/users" exact>
-                <User/>  
-            </Route>
-            <Route path="/places/new" exact>
-                <NewPlaces/>  
-            </Route>
-        </Switch>
+        <main>
+          <Switch>
+              <Route path="/users" exact>
+                  <User/>  
+              </Route>
+              <Route path="/places/new" exact>
+                  <NewPlaces/>  
+              </Route>
+          </Switch>
+        </main>
       </MainNavigation>
   </BrowserRouter>
   
