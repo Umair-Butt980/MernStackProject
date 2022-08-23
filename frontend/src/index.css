@@ -1,37 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   margin: 0;
+  background: #4d4d4d;
 }
 
-.header{
-  padding:2px;
+.slide-in-left-enter {
+  transform: translateX(-100%);
 }
 
-.footer{
-  margin:12px;
-  padding:0px !important;
+.slide-in-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 200ms;
 }
 
-#instagram{
-  color: #000;
-  background-color: aqua;
+.slide-in-left-exit {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
-#facebook{
-  color: #fff;
-  background-color: aqua;
-  page-break-after: always;
-  word-spacing: 0mm;
-  margin-top: 0em;
-  margin-bottom: 12px;
-  justify-content: first baseline;
+.slide-in-left-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 200ms;
 }
 
-
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
