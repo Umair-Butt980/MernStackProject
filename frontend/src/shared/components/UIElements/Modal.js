@@ -28,6 +28,19 @@ const ModalOverlay = (props) => {
   return ReactDOM.createPortal(content, document.getElementById("modal-hook"));
 };
 
-const Modal = (props) => {};
+const Modal = (props) => {
+  return (
+    <React.Fragment>
+      {props.show && <BackDrop onClick={props.onCancel} />}
+      <CSSTransition
+        in={props.show}
+        mountOnEnter
+        unmountOnExit
+        timeout={200}
+        classNames="Modal"
+      ></CSSTransition>
+    </React.Fragment>
+  );
+};
 
 export default Modal;
