@@ -8,6 +8,7 @@ import {
 import "./NewPlace.css";
 
 const NewPlace = () => {
+  // title and description Handlers
   const titleInputHandler = useCallback((id, value, isValid) => {}, []);
   const decriptionInputHandler = useCallback((id, value, isValid) => {}, []);
 
