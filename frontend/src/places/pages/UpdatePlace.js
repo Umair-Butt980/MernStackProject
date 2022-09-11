@@ -49,6 +49,36 @@ const UpdatePlace = () => {
       </div>
     );
   }
+  return (
+    <form>
+      <Input
+        id="title"
+        element="input"
+        type="text"
+        label="Title"
+        validator={[VALIDATOR_REQUIRE()]}
+        errorText="Please Enter a valid title"
+        onInput={() => {}}
+        valud={identifiedPlace.title}
+        valid={true}
+      />
+      {/* Description Input */}
+      <Input
+        id="description"
+        element="input"
+        type="text"
+        label="Description"
+        validator={[VALIDATOR_MINLENGTH(5)]}
+        errorText="Please Enter a valid Description of minimum 5 letters"
+        onInput={() => {}}
+        valud={identifiedPlace.description}
+        valid={true}
+      />
+      <Button type="submit" disabled={true}>
+        UPDATE PLACE
+      </Button>
+    </form>
+  );
 };
 
 export default UpdatePlace;
